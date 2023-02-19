@@ -1,0 +1,12 @@
+{
+    "easee": {
+        "userName": "mail@example.com",
+        "password": "mysecurepassword",
+        "AccessToken": "my_bearer_access_token",
+        "currency": "EUR",
+        "InvalidateRefreshToken": "False"
+    },
+    "tibber": {
+        "token": "my_tibber_token"
+    }
+}
