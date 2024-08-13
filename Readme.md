@@ -7,7 +7,17 @@ Python script for sending current tibber electricity price to easee wallbox char
 First clone this repository, and setup your config.json file.
 
 ```
-git clone git@github.com:andreaseu/easee-tibber.git
+
+-- Create a docker base folder
+
+mkdir /home/loginuser/scripts/
+git clone git@github.com:andreaseu/easee-tibber.git /home/loginuser/scripts/easee-tibber
+mkdir /home/loginuser/scripts/easee-tibber/logs
+sudo ln -s /home/loginuser/scripts/ /opt/scripts
+
+
+cd /opt/scripts/easee-tibber
+
 cp config.example config.json
 ```
 
@@ -27,5 +37,5 @@ python3 set_price.py
 Or create a cron job on Linux Server to start price matching every hour at 5 minutes past the hour.
 
 ````
-5 * * * /usr/bin/python3 /opt/script/tibber-easee/set_price.py
+5 * * * * /usr/bin/python3 /opt/script/easee-tibber/set_price.py >> /opt/script/easee-tibber/logs/setprice.log 2>&1
 ```
