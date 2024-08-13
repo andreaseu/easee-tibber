@@ -37,5 +37,5 @@ python3 set_price.py
 Or create a cron job on Linux Server to start price matching every hour at 5 minutes past the hour.
 
 ````
-5 * * * * /usr/bin/python3 /opt/script/easee-tibber/set_price.py >> /opt/script/easee-tibber/logs/setprice.log 2>&1
+5 * * * * /usr/bin/python3 /opt/scripts/easee-tibber/set_price.py >> /opt/scripts/easee-tibber/logs/setprice.log 2>&1
 ```
